@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios'
+import Character from './components/Character'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -27,7 +28,7 @@ const App = () => {
       <h1 className="Header">Characters</h1>
       { error && <h2>NO ONE HOME</h2>}
       { character.map(char => {
-        return <Character name={char.name} birth={char.birth_year} height={char.height} mass={char.mass} eye={char.eye_color} hair={char.hair_color} skin={char.skin_color}/>
+        return <Character name={char.name} birth={char.birth_year} height={char.height} mass={char.mass} eye={char.eye_color} hair={char.hair_color} skin={char.skin_color} />
       })  }
     </div>
   );
