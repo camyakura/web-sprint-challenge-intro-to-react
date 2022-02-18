@@ -5,3 +5,15 @@ body {
   background-image: url('./images/sw-bg.jpg');
   background-size: cover;
 }
+
+.Header{
+  font-family: 'Monoton', cursive;
+}
+
+.characters {
+  font-family: 'Black Ops One', cursive;
+}
+
+.birthYear{
+  font-family: 'Black Ops One', cursive;
+}

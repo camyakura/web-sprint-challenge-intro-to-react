@@ -19,6 +19,7 @@ const StyledApp= styled.div`
 
     h1 {
       font-size: 5rem
+     
     }
 `
 
@@ -47,7 +48,7 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
         <div className='container'>
             { character.map(char => {
-              return <Character name={char.name} birth={char.birth_year} />
+              return <Character name={char.name} birth={char.birth_year} key={char.id}/>
             }) }
         </div>
     </StyledApp>
