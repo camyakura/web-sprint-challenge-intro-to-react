@@ -19,7 +19,6 @@ const StyledApp= styled.div`
 
     h1 {
       font-size: 5rem
-     
     }
 `
 
@@ -36,7 +35,6 @@ const App = () => {
       axios.get(`https://swapi.dev/api/people`)
         .then( resp => {
           setCharacter(resp.data)
-          console.log(resp)
         })
         .catch(err => {
           console.log(err)
@@ -48,7 +46,7 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
         <div className='container'>
             { character.map(char => {
-              return <Character name={char.name} birth={char.birth_year} key={char.id}/>
+              return <Character name={char.name} birth={char.birth_year} key={char.created}/>
             }) }
         </div>
     </StyledApp>
